@@ -1,0 +1,462 @@
+@font-face {
+    src: url("../fonts/shabnam.ttf");
+    font-family: shabnam;
+}
+
+:root {
+    --color-first: #ffff;
+    --color-second: #252525;
+    --color-main: #ffae00;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: shabnam;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, a {
+    padding: 0;
+    margin: 0;
+    color: #252525;
+    font-family: shabnam;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.text-white {
+    color: var(--color-first);
+}
+
+.bg-main {
+    background-color: var(--color-main);
+}
+
+/*************************************************/
+/*************************************************/
+/*                 Header Starts                 */
+/*************************************************/
+/*************************************************/
+.banner {
+    background: url("../images/bg2.jpg") rgba(0, 0, 0, 0.76);
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-wrapper {
+    z-index: 999999999;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    width: 94%;
+    height: 50px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: var(--color-main);
+    box-shadow: 0px 0px 13px -5px rgba(0, 0, 0, 0.75);
+}
+
+.inner-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-header .logo-wrapper {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.inner-header .logo-wrapper img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+.logo-wrapper .phone{
+    color: white;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-wrapper .phone p{
+    color: white;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.inner-header .navbar ul {
+    display: flex;
+    direction: rtl;
+    justify-content: flex-start;
+    align-content: center;
+    list-style: none;
+}
+
+.inner-header .navbar ul li {
+    margin: 0 20px;
+    border-bottom: solid 2px transparent;
+    padding-bottom: 5px;
+    transition: 0.4s;
+}
+.inner-header .navbar ul .log-reg{
+    border: solid 1px var(--color-first);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px;
+    border-color: white;
+    margin-top: -10px;
+}
+.log-reg span{
+    color: white;
+}
+.inner-header .navbar ul .log-reg a{
+    margin: 0 5px;
+    transition: 0.3s;
+}
+.inner-header .navbar ul .log-reg a:hover{
+    color: var(--color-second);
+}
+
+.inner-header .navbar ul li:hover {
+    border-color: white;
+}
+
+.inner-header .navbar ul li a {
+    color: var(--color-first);
+}
+
+.inner-header .navbar {
+    width: 70%;
+    height: 100%;
+}
+
+/*************************************************/
+/*************************************************/
+/*                  Header Ends                  */
+/*************************************************/
+/*************************************************/
+
+
+/*************************************************/
+/*************************************************/
+/*                  Banner Starts                */
+/*************************************************/
+/*************************************************/
+
+.container {
+    color: #e5e5e5;
+    font-size: 2.26rem;
+    text-transform: uppercase;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container .sign-up-now{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    margin-top: 30px;
+}
+.container .sign-up-now a{
+    background-color: var(--color-main);
+    padding: 7px 20px;
+    border: solid 2px var(--color-main);
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.container .sign-up-now a:hover{
+    background-color: transparent;
+    color: white;
+}
+.container .sign-up-now p{
+    color: white;
+    margin-left: 15px;
+}
+.go-down {
+    margin-top: 25px;
+    animation-name: float;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.go-down a{
+    color: white;
+    font-size: 45px;
+}
+@keyframes float {
+    0%{
+        transform: translateY(-8px);
+    }
+    50%{
+        transform: translateY(8px);
+    }
+    100%{
+        transform: translateY(-8px);
+    }
+}
+.container .inner-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    color: white;
+    height: 75px;
+    font-size: 38px;
+}
+
+.animation {
+    height: 75px;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.animation > div > div {
+    padding: 0.25rem 0.75rem;
+    height: 2.80rem;
+    margin-bottom: 2.82rem;
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.animation div:first-child {
+    animation: text-animation 8s infinite;
+}
+
+.first div {
+    background-color: var(--color-main);
+}
+
+.second div {
+    background-color: var(--color-main);
+}
+
+.third div {
+    background-color: var(--color-main);
+}
+
+@keyframes text-animation {
+    0% {
+        margin-top: 0;
+    }
+    10% {
+        margin-top: 0;
+    }
+    20% {
+        margin-top: -5.62rem;
+    }
+    30% {
+        margin-top: -5.62rem;
+    }
+    40% {
+        margin-top: -11.24rem;
+    }
+    60% {
+        margin-top: -11.24rem;
+    }
+    70% {
+        margin-top: -5.62rem;
+    }
+    80% {
+        margin-top: -5.62rem;
+    }
+    90% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+/*************************************************/
+/*************************************************/
+/*                  Banner Ends                  */
+/*************************************************/
+/*************************************************/
+
+
+/*************************************************/
+/*************************************************/
+/*                  Body Starts                  */
+/*************************************************/
+/*************************************************/
+.body-content{
+    width: 94%;
+    margin: 0 auto;
+}
+.main-search{
+    width: 100%;
+    margin: 50px 0;
+}
+.main-search div{
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--color-main);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: solid 2px var(--color-main);
+}
+.main-search div input{
+    width: 90%;
+    background: transparent;
+    border: none;
+    height: 100%;
+    text-align: right;
+    padding: 0 15px;
+    color: var(--color-first);
+    font-size: 15px;
+    font-family: shabnam;
+}
+.main-search div button{
+    width: 10%;
+    border: none;
+    height: 100%;
+    font-size: 25px;
+    color: var(--color-main);
+    cursor: pointer;
+    border-radius: 30px 0 0 30px;
+    background-color: var(--color-first);
+}
+.special-offers-wrapper{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.section-title{
+    border-bottom: solid 3px var(--color-main);
+    text-align: right;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.special-offers-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.special-offers-content .box{
+    box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    width: 21%;
+    height: 370px;
+    padding: 15px;
+}
+.special-offers-content .box .more{
+    background-color: var(--color-main);
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+    border: solid 2px var(--color-main);
+    transition: 0.3s;
+}
+.special-offers-content .box .more a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.special-offers-content .box .more:hover{
+    background-color: transparent;
+}
+.special-offers-content .box .info{
+    text-align: right;
+    width: 100%;
+    margin-top: 10px;
+}
+.special-offers-content .box .info .section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--color-main);
+    margin-top: 5px;
+}
+.special-offers-content .box .info .section svg{
+    width: 10%;
+}
+.special-offers-content .box .info .section p,a{
+    margin-right: 10px;
+    color: var(--color-second);
+}
+.special-offers-content .box .image{
+    width: 100%;
+    height: 50%;
+}
+.special-offers-content .box .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.city-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.city-wrapper .city{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.city-wrapper .city .name{
+    text-align: center;
+    margin-top: 5px;
+}
+.city-wrapper .city .img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid 2px var(--color-main);
+}
+/*************************************************/
+/*************************************************/
+/*                   Body Ends                   */
+/*************************************************/
+/*************************************************/
+
+
+/*************************************************/
+/*************************************************/
+/*                 Footer Starts                 */
+/*************************************************/
+/*************************************************/
+footer{
+    width: 100%;
+    background: url("../images/footer-bg.jpg") rgba(0,0,0,0.82);
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*************************************************/
+/*************************************************/
+/*                  Footer Ends                  */
+/*************************************************/
+/*************************************************/
