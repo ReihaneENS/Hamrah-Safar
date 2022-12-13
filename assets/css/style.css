@@ -13,6 +13,7 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: shabnam;
+    overflow-x: hidden;
 }
 
 p, span, h1, h2, h3, h4, h5, h6, a {
@@ -312,8 +313,18 @@ input:focus {
 .main-search{
     width: 100%;
     margin: 50px 0;
+    background: url("../images/footer-bg.jpg") rgba(0,0,0,0.75);
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.main-search div{
+.main-search form{
     width: 70%;
     margin: 0 auto;
     background-color: var(--color-main);
@@ -324,7 +335,7 @@ input:focus {
     height: 50px;
     border: solid 2px var(--color-main);
 }
-.main-search div input{
+.main-search form input{
     width: 90%;
     background: transparent;
     border: none;
@@ -335,7 +346,7 @@ input:focus {
     font-size: 15px;
     font-family: shabnam;
 }
-.main-search div button{
+.main-search form button{
     width: 10%;
     border: none;
     height: 100%;
@@ -454,6 +465,27 @@ footer{
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+}
+.footer-content{
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-content p{
+    color: var(--color-first);
+    text-align: right;
+    direction: rtl;
+}
+.footer-content .logo{
+    width: 80px;
+    height: 80px;
+}
+.footer-content .logo img{
+    width: 100%;
+    height: 100%;
 }
 /*************************************************/
 /*************************************************/
