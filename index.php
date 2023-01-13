@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" type="text/css">
+    <link rel="icon" href="assets/images/logo-main.png">
     <title>خانه</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <div class="header-wrapper">
         <div class="inner-header">
             <div class="logo-wrapper">
-                <img src="assets/images/logo-main.png" alt="logo">
+                <a href="#"><img src="assets/images/logo-main.png" alt="logo"></a>
                 <div class="phone">
                     <i class="fa-solid fa-phone"></i>
                     <a href="tel:+021-88302135"><p>۰۲۱-۸۸۳۰۲۱۳۵</p></a>
@@ -21,14 +22,54 @@
             </div>
             <div class="navbar">
                 <ul>
-                    <li><a href="#">خانه</a></li>
-                    <li><a href="#">شهر ها</a></li>
-                    <li><a href="#">درباره ما</a></li>
-                    <li><a href="#">تماس با ما</a></li>
+                    <li><a href="index.html">خانه</a></li>
+                    <li class="drop-down-parent">
+                        <a href="#">شهر ها</a>
+                        <div class="drop-down">
+                            <div class="inner-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">تهران</a>
+                                        <a href="#">مشهد</a>
+                                        <a href="#">زنجان</a>
+                                        <a href="#">تبریز</a>
+                                        <a href="#">اصفهان</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">شیراز</a>
+                                        <a href="#">ماسال</a>
+                                        <a href="#">ارومیه</a>
+                                        <a href="#">بندر عباس</a>
+                                        <a href="#">کیش</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">قشم</a>
+                                        <a href="#">کرمان</a>
+                                        <a href="#">یزد</a>
+                                        <a href="#">اراک</a>
+                                        <a href="#">اردبیل</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ماسوله</a>
+                                        <a href="#">رامسر</a>
+                                        <a href="#">کرمانشاه</a>
+                                    </li>
+                                </ul>
+                                <ul class="iran-map">
+                                    <li>
+                                        <img src=assets/images/iran.jpg alt="iran">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="AboutUs.html">درباره ما</a></li>
+                    <li><a href="ContactUs.html">تماس با ما</a></li>
+                    <li><a href="IranMap.html">نقشه ایران</a></li>
                     <li class="log-reg">
-                        <a href="#">ورود</a>
+                        <a href="Login.php">ورود</a>
                         <span>|</span>
-                        <a href="#">عضویت</a>
+                        <a href="Register.php">عضویت</a>
                     </li>
                 </ul>
             </div>
@@ -89,7 +130,7 @@
                     </div>
                 </div>
                 <div class="more">
-                    <a href="#">جزئیات بیشتر</a>
+                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
                 </div>
             </div>
             <div class="box">
@@ -117,7 +158,7 @@
                     </div>
                 </div>
                 <div class="more">
-                    <a href="#">جزئیات بیشتر</a>
+                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
                 </div>
             </div>
             <div class="box">
@@ -146,7 +187,7 @@
                     </div>
                 </div>
                 <div class="more">
-                    <a href="#">جزئیات بیشتر</a>
+                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
                 </div>
             </div>
             <div class="box">
@@ -174,7 +215,7 @@
                     </div>
                 </div>
                 <div class="more">
-                    <a href="#">جزئیات بیشتر</a>
+                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
                 </div>
             </div>
         </div>
@@ -216,7 +257,7 @@
                     </div>
                 </div>
                 <div class="more">
-                    <a href="#">جزئیات بیشتر</a>
+                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
                 </div>
             </div>
             <div class="box">
@@ -245,7 +286,7 @@
                     </div>
                 </div>
                 <div class="more">
-                    <a href="#">جزئیات بیشتر</a>
+                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
                 </div>
             </div>
             <div class="box">
@@ -274,7 +315,7 @@
                     </div>
                 </div>
                 <div class="more">
-                    <a href="#">جزئیات بیشتر</a>
+                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
                 </div>
             </div>
             <div class="box">
@@ -302,7 +343,7 @@
                     </div>
                 </div>
                 <div class="more">
-                    <a href="#">جزئیات بیشتر</a>
+                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
                 </div>
             </div>
         </div>
@@ -378,8 +419,8 @@
     <div class="footer-content">
         <p>تمامی حقوق سایت محفوظ است.</p>
         <div class="logo">
-                <img src="assets/images/logo-main.png" alt="logo">
-            </div>
+            <a href="#"><img src="assets/images/logo-main.png" alt="logo"></a>
+        </div>
     </div>
 </footer>
 <script src="assets/fontawesome/js/all.min.js"></script>
