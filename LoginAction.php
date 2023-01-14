@@ -34,9 +34,9 @@ if($row){
 ?>
 
 <?php
-    header("Location: LoginSuccessful.html");
+    header("Location: LoginSuccessful.php");
 }else
-    header("Location: LoginFailed.html");
+    header("Location: LoginFailed.php");
 ?>
 
 <?php

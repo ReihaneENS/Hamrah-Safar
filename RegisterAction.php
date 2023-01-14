@@ -42,9 +42,9 @@ if (mysqli_connect_errno()) {
 <?php
 $insert_query = "INSERT INTO users (first_name,last_name,email,phone_number,password) VALUES ('$firstName','$lastName','$email','$phoneNumber','$password')";
 if (mysqli_query($link, $insert_query) === true)
-    header("Location: RegistrationSuccessful.html");
+    header("Location: RegistrationSuccessful.php");
 else
-    header("Location: RegistrationFailed.html");
+    header("Location: RegistrationFailed.php");
 ?>
 
 <?php

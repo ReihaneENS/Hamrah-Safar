@@ -23,8 +23,10 @@ if (mysqli_connect_errno()) {
 </head>
 <body>
 <?php
-$sql = "SELECT * FROM restaurants";
-$result = $link->query($sql);
+$sql = "SELECT * FROM restaurants WHERE city='تهران' LIMIT 5";
+$result = mysqli_query($link,$sql);
+$sql2 = "SELECT * FROM restaurants WHERE city='مشهد' LIMIT 5";
+$result2 = mysqli_query($link,$sql2);
 ?>
 <div class="banner">
     <?php
@@ -62,127 +64,42 @@ $result = $link->query($sql);
         <div class="special-offers-content">
             <?php
             if (mysqli_num_rows($result) == 0){
-                ech('no records');
+                echo('no records');
             }else{
                 // our query returned at least one result. loop over results and do stuff.
-                while($row = mysqli_fetch_assoc($result)){
+                while($row = $result->fetch_assoc()){
                     //do something with the contents of $row
-                    echo '<div class="box">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="assets/images/moslem.jpg" alt="رستوران مسلم">
+                    echo ("<div class='box'>
+                                                <div class='image'>
+                                                    <a href='#'>
+                                                        <img src='{$row['image']}'>
                                                     </a>
                                                 </div>
-                                                <div class="info">
-                                                    <div class="section">
-                                                        <p>رستوران مسلم</p>
-                                                        <i class="fa-solid fa-utensils"></i>
+                                                <div class='info'>
+                                                    <div class='section'>
+                                                        <p> {$row['title']} </p>
+                                                        <i class='fa-solid fa-utensils'></i>
                                                     </div>
-                                                    <div class="section">
-                                                        <p>بازار 15 خرداد</p>
-                                                        <i class="fa-solid fa-location-dot"></i>
+                                                    <div class='section'>
+                                                        <p>{$row['address']}</p>
+                                                        <i class='fa-solid fa-location-dot'></i>
                                                     </div>
-                                                    <div class="section">
-                                                        <a href="tel:+021-55899834">۰۲۱-۵۵۸۹۹۸۳۴</a>
-                                                        <i class="fa-solid fa-phone"></i>
+                                                    <div class='section'>
+                                                        <a href='tel:+{$row['phone']}'>{$row['phone']}</a>
+                                                        <i class='fa-solid fa-phone'></i>
                                                     </div>
-                                                    <div class="section">
-                                                        <a href="https://moslemrestaurant.ir/">وبسایت رستوران</a>
-                                                        <i class="fa-solid fa-link"></i>
+                                                    <div class='section'>
+                                                        <a href='{$row['website']}'>وبسایت رستوران</a>
+                                                        <i class='fa-solid fa-link'></i>
                                                     </div>
                                                 </div>
-                                                <div class="more">
-                                                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
+                                                <div class='more'>
+                                                    <a href='SpecificRestaurant.php'>جزئیات بیشتر</a>
                                                 </div>
-                                            </div>';
+                                            </div>");
                 }
             }
             ?>
-            <!--            <div class="box">
-                            <div class="image">
-                                <a href="#">
-                                    <img src="assets/images/shandiz.jpg" alt="رستوران شاندیز">
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="section">
-                                    <p> رستوران شاندیز جردن</p>
-                                    <i class="fa-solid fa-utensils"></i>
-                                </div>
-                                <div class="section">
-                                    <p>جردن</p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="section">
-                                    <a href="tel:+021-75313">۰۲۱-۷۵۳۱۳</a>
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="section">
-                                    <a href="https://shandizjordan.com/">وبسایت رستوران</a>
-                                    <i class="fa-solid fa-link"></i>
-                                </div>
-                            </div>
-                            <div class="more">
-                                <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="image">
-                                <a href="#">
-                                    <img src="assets/images/senso.jpg" alt="رستوران سنسو">
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="section">
-                                    <p>رستوران ایتالیایی سنسو</p>
-                                    <i class="fa-solid fa-utensils"></i>
-                                </div>
-                                <div class="section">
-                                    <p>بلوار فردوس</p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="section">
-                                    <a href="tel:+021-44020103">۰۲۱-۴۴۰۲۰۱۰۳</a>
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="section">
-                                    <a href="https://www.instagram.com/accounts/login/?next=/senso_restaurant/">صفحه اینستاگرام
-                                        رستوران</a>
-                                    <i class="fa-solid fa-link"></i>
-                                </div>
-                            </div>
-                            <div class="more">
-                                <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="image">
-                                <a href="#">
-                                    <img src="assets/images/nayeb.jpg" alt="رستوران نایب">
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="section">
-                                    <p>رستوران نایب</p>
-                                    <i class="fa-solid fa-utensils"></i>
-                                </div>
-                                <div class="section">
-                                    <p>خیابان ولیعصر</p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="section">
-                                    <a href="tel:+021-88713474">۰۲۱-۸۸۷۱۳۴۷۴</a>
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="section">
-                                    <a href="https://nayebsaei.com/">وبسایت رستوران</a>
-                                    <i class="fa-solid fa-link"></i>
-                                </div>
-                            </div>
-                            <div class="more">
-                                <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
-                            </div>
-                        </div>-->
         </div>
     </div>
     <div class="main-search">
@@ -196,121 +113,44 @@ $result = $link->query($sql);
             <h3>پیشنهادات ویژه در مشهد</h3>
         </div>
         <div class="special-offers-content">
-            <div class="box">
-                <div class="image">
-                    <a href="#">
-                        <img src="assets/images/pesaran-karim.jpg" alt="رستوران پسران کریم">
-                    </a>
-                </div>
-                <div class="info">
-                    <div class="section">
-                        <p>رستوران پسران کریم</p>
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <div class="section">
-                        <p>بلوار خیام</p>
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="section">
-                        <a href="tel:+05138491208">۰۵۱۳۸۴۹۱۲۰۸</a>
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="section">
-                        <a href="https://www.instagram.com/accounts/login/?next=/pesaranekarim">صفحه اینستاگرام
-                            رستوران</a>
-                        <i class="fa-solid fa-link"></i>
-                    </div>
-                </div>
-                <div class="more">
-                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <a href="#">
-                        <img src="assets/images/taranom-terme.jpg" alt="رستوران ترنم و ترمه">
-                    </a>
-                </div>
-                <div class="info">
-                    <div class="section">
-                        <p> رستوران رستوران ترنم و ترمه</p>
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <div class="section">
-                        <p>خیابان امام رضا</p>
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="section">
-                        <a href="tel:+05138038">۰۵۱۳۸۰۳۸</a>
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="section">
-                        <a href="https://www.instagram.com/accounts/login/?next=/Ghasrtalaeehotel">صفحه اینستاگرام
-                            رستوران</a>
-                        <i class="fa-solid fa-link"></i>
-                    </div>
-                </div>
-                <div class="more">
-                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <a href="#">
-                        <img src="assets/images/moein-darbari.jpg" alt="رستوران معین درباری">
-                    </a>
-                </div>
-                <div class="info">
-                    <div class="section">
-                        <p>رستوران معین درباری</p>
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <div class="section">
-                        <p> بین میدان تلویزیون و میدان پارک</p>
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="section">
-                        <a href="tel:+05138783777">۰۵۱۳۸۷۸۳۷۷۷</a>
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="section">
-                        <a href="https://www.instagram.com/accounts/login/?next=/moeindarbari_mashhad">صفحه اینستاگرام
-                            رستوران</a>
-                        <i class="fa-solid fa-link"></i>
-                    </div>
-                </div>
-                <div class="more">
-                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <a href="#">
-                        <img src="assets/images/rastgoo.jpg" alt="رستوران راستگو مشهد">
-                    </a>
-                </div>
-                <div class="info">
-                    <div class="section">
-                        <p>رستوران راستگو مشهد</p>
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <div class="section">
-                        <p>بلوار وکیل آباد</p>
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="section">
-                        <a href="tel:+05136016696">۰۵۱۳۶۰۱۶۶۹۶</a>
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="section">
-                        <a href="https://www.instagram.com/accounts/login/?next=/viprastgoo">صفحه اینستاگرام رستوران</a>
-                        <i class="fa-solid fa-link"></i>
-                    </div>
-                </div>
-                <div class="more">
-                    <a href="SpecificRestaurant.html">جزئیات بیشتر</a>
-                </div>
-            </div>
+            <?php
+            if (mysqli_num_rows($result2) == 0){
+                echo('no records');
+            }else{
+                // our query returned at least one result. loop over results and do stuff.
+                while($row = $result2->fetch_assoc()){
+                    //do something with the contents of $row
+                    echo ("<div class='box'>
+                                                <div class='image'>
+                                                    <a href='#'>
+                                                        <img src='{$row['image']}'>
+                                                    </a>
+                                                </div>
+                                                <div class='info'>
+                                                    <div class='section'>
+                                                        <p> {$row['title']} </p>
+                                                        <i class='fa-solid fa-utensils'></i>
+                                                    </div>
+                                                    <div class='section'>
+                                                        <p>{$row['address']}</p>
+                                                        <i class='fa-solid fa-location-dot'></i>
+                                                    </div>
+                                                    <div class='section'>
+                                                        <a href='tel:+{$row['phone']}'>{$row['phone']}</a>
+                                                        <i class='fa-solid fa-phone'></i>
+                                                    </div>
+                                                    <div class='section'>
+                                                        <a href='{$row['website']}'>وبسایت رستوران</a>
+                                                        <i class='fa-solid fa-link'></i>
+                                                    </div>
+                                                </div>
+                                                <div class='more'>
+                                                    <a href='SpecificRestaurant.php'>جزئیات بیشتر</a>
+                                                </div>
+                                            </div>");
+                }
+            }
+            ?>
         </div>
     </div>
     <div class="city-wrapper">

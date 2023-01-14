@@ -28,30 +28,30 @@
                         <div class="inner-list">
                             <ul>
                                 <li>
-                                    <a href="FilterCities.html">تهران</a>
-                                    <a href="FilterCities.html">مشهد</a>
-                                    <a href="FilterCities.html">زنجان</a>
-                                    <a href="FilterCities.html">تبریز</a>
-                                    <a href="FilterCities.html">اصفهان</a>
+                                    <a href="FilterCities.php">تهران</a>
+                                    <a href="FilterCities.php">مشهد</a>
+                                    <a href="FilterCities.php">زنجان</a>
+                                    <a href="FilterCities.php">تبریز</a>
+                                    <a href="FilterCities.php">اصفهان</a>
                                 </li>
                                 <li>
-                                    <a href="FilterCities.html">شیراز</a>
-                                    <a href="FilterCities.html">ماسال</a>
-                                    <a href="FilterCities.html">ارومیه</a>
-                                    <a href="FilterCities.html">بندر عباس</a>
-                                    <a href="FilterCities.html">کیش</a>
+                                    <a href="FilterCities.php">شیراز</a>
+                                    <a href="FilterCities.php">ماسال</a>
+                                    <a href="FilterCities.php">ارومیه</a>
+                                    <a href="FilterCities.php">بندر عباس</a>
+                                    <a href="FilterCities.php">کیش</a>
                                 </li>
                                 <li>
-                                    <a href="FilterCities.html">قشم</a>
-                                    <a href="FilterCities.html">کرمان</a>
-                                    <a href="FilterCities.html">یزد</a>
-                                    <a href="FilterCities.html">اراک</a>
-                                    <a href="FilterCities.html">اردبیل</a>
+                                    <a href="FilterCities.php">قشم</a>
+                                    <a href="FilterCities.php">کرمان</a>
+                                    <a href="FilterCities.php">یزد</a>
+                                    <a href="FilterCities.php">اراک</a>
+                                    <a href="FilterCities.php">اردبیل</a>
                                 </li>
                                 <li>
-                                    <a href="FilterCities.html">ماسوله</a>
-                                    <a href="FilterCities.html">رامسر</a>
-                                    <a href="FilterCities.html">کرمانشاه</a>
+                                    <a href="FilterCities.php">ماسوله</a>
+                                    <a href="FilterCities.php">رامسر</a>
+                                    <a href="FilterCities.php">کرمانشاه</a>
                                 </li>
                             </ul>
                             <ul class="iran-map">
@@ -63,8 +63,8 @@
                     </div>
                 </li>
                 <li><a href="AboutUs.html">درباره ما</a></li>
-                <li><a href="ContactUs.html">تماس با ما</a></li>
-                <li><a href="IranMap.html">نقشه ایران</a></li>
+                <li><a href="ContactUs.php">تماس با ما</a></li>
+                <li><a href="IranMap.php">نقشه ایران</a></li>
                 <li class="log-reg">
                     <a href="Login.php">ورود</a>
                     <span>|</span>
