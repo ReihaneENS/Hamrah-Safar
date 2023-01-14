@@ -10,79 +10,18 @@
     <title>ورود</title>
 </head>
 <body>
-<div class="header-wrapper">
-    <div class="inner-header">
-        <div class="logo-wrapper">
-            <a href="#"><img src="assets/images/logo-main.png" alt="logo"></a>
-            <div class="phone">
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+021-88302135"><p>۰۲۱-۸۸۳۰۲۱۳۵</p></a>
-            </div>
-        </div>
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">خانه</a></li>
-                <li class="drop-down-parent">
-                    <a href="#">شهر ها</a>
-                    <div class="drop-down">
-                        <div class="inner-list">
-                            <ul>
-                                <li>
-                                    <a href="FilterCities.html">تهران</a>
-                                    <a href="FilterCities.html">مشهد</a>
-                                    <a href="FilterCities.html">زنجان</a>
-                                    <a href="FilterCities.html">تبریز</a>
-                                    <a href="FilterCities.html">اصفهان</a>
-                                </li>
-                                <li>
-                                    <a href="FilterCities.html">شیراز</a>
-                                    <a href="FilterCities.html">ماسال</a>
-                                    <a href="FilterCities.html">ارومیه</a>
-                                    <a href="FilterCities.html">بندر عباس</a>
-                                    <a href="FilterCities.html">کیش</a>
-                                </li>
-                                <li>
-                                    <a href="FilterCities.html">قشم</a>
-                                    <a href="FilterCities.html">کرمان</a>
-                                    <a href="FilterCities.html">یزد</a>
-                                    <a href="FilterCities.html">اراک</a>
-                                    <a href="FilterCities.html">اردبیل</a>
-                                </li>
-                                <li>
-                                    <a href="FilterCities.html">ماسوله</a>
-                                    <a href="FilterCities.html">رامسر</a>
-                                    <a href="FilterCities.html">کرمانشاه</a>
-                                </li>
-                            </ul>
-                            <ul class="iran-map">
-                                <li>
-                                    <img src=assets/images/iran.jpg alt="iran">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="AboutUs.html">درباره ما</a></li>
-                <li><a href="ContactUs.html">تماس با ما</a></li>
-                <li><a href="IranMap.html">نقشه ایران</a></li>
-                <li class="log-reg">
-                    <a href="Login.html">ورود</a>
-                    <span>|</span>
-                    <a href="Register.php">عضویت</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<?php
+include('HeaderMain.php');
+?>
 <div class="form-wrapper">
     <div class="inner-form">
         <div class="title">
             <h3>ورود</h3>
         </div>
-        <form action="#">
-            <input type="text" name="mobile" placeholder="شماره موبایل">
+        <form action="LoginAction.php" method="post">
+            <input type="email" name="email" placeholder="آدرس ایمیل">
             <input type="password" name="password" placeholder="رمز عبور">
-            <button>ورود</button>
+            <button type="submit">ورود</button>
             <p>کاربر جدید هستید؟ <a href="Register.php">ثبت نام </a></p>
         </form>
     </div>
